@@ -1,4 +1,4 @@
-function [spikepos,y] = schwellwert(in, params)
+function [spikepos,y] = ABS(in, params)
 %SCHWELLWERT computes the timestamps of detected spikes in timedomain
 %
 %   Input parameters:

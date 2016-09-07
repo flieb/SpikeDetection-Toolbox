@@ -40,7 +40,7 @@ spikepos2 = GABOR(in,params);
 spikepos3 = SWTTEO(in,params);
 spikepos4 = MTEO(in,[1 3 5],params);
 spikepos5 = SWT2012(in,params);  
-spikepos6 = schwellwert(in,params);
+spikepos6 = ABS(in,params);
 spikepos7 = ptsdMat2(in,params);
 
 offset = 2e-4*fs;
@@ -59,7 +59,7 @@ fprintf('GABR - DR: %2.2f  \t FP: %2.2f \n',100 -((length(spikepos2) - res2)/len
 fprintf('SWTO - DR: %2.2f  \t FP: %2.2f \n',100 -((length(spikepos3) - res3)/length(spikepos3)*100), (length(spikepos3) - res3)/length(spikepos3)*100);
 fprintf('MTEO - DR: %2.2f  \t FP: %2.2f \n',100 -((length(spikepos4) - res4)/length(spikepos4)*100), (length(spikepos4) - res4)/length(spikepos4)*100);
 fprintf('SWTS - DR: %2.2f  \t FP: %2.2f \n',100 -((length(spikepos5) - res5)/length(spikepos5)*100), (length(spikepos5) - res5)/length(spikepos5)*100);
-fprintf('SCHW - DR: %2.2f  \t FP: %2.2f \n',100 -((length(spikepos6) - res6)/length(spikepos6)*100), (length(spikepos6) - res6)/length(spikepos6)*100);
+fprintf('ABS - DR: %2.2f  \t FP: %2.2f \n',100 -((length(spikepos6) - res6)/length(spikepos6)*100), (length(spikepos6) - res6)/length(spikepos6)*100);
 fprintf('PTSD - DR: %2.2f  \t FP: %2.2f \n',100 -((length(spikepos7) - res7)/length(spikepos7)*100), (length(spikepos7) - res7)/length(spikepos7)*100);
 fprintf('----------------------\n');
 
