@@ -11,7 +11,7 @@
     %     Output shown is the signal with marked spikes and detection rate DR and the false-positve rate FP of the used algorithms.
 
 
-L = 10000; %Length of the signal
+L = 1000; %Length of the signal
 fs = 10000; %not to be change
 numspikes = 100; %number of spikes
 sigma = 10; %determines SNR
