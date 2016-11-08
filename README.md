@@ -9,3 +9,5 @@ Other folders contain different data: In *Algorithms* all spike detectors can be
 *Data* contains the function for signal generation, the used filter and the data of spikes. Further necessary data is stored in *Misc*.
 
 To start the spike detection open the demo-file and add the other folders to the MATLAB path. In the demo file modifications can be done to change the signal form. Run the script and results are given. Those show the detection rate *DR* and false-positive rate *FP*.
+
+November, 2016
