@@ -11,9 +11,9 @@
     %     Output shown is the signal with marked spikes and detection rate DR and the false-positve rate FP of the used algorithms.
 
 
-L = 10000; %Length of the signal
+L = 10000; %Length of the signal 
 fs = 10000; %not to be change
-numspikes = 10; %number of spikes
+numspikes = 20; %number of spikes (if this number is too large, with respect to L, then genMEASignal cannot place all spikes, resulting in an infinite loop)
 sigma = 4; %determines SNR
 
 
