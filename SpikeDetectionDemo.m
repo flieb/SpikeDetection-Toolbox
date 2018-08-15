@@ -11,10 +11,10 @@
     %     Output shown is the signal with marked spikes and detection rate DR and the false-positve rate FP of the used algorithms.
 
 
-L = 1000; %Length of the signal
+L = 10000; %Length of the signal
 fs = 10000; %not to be change
-numspikes = 100; %number of spikes
-sigma = 10; %determines SNR
+numspikes = 10; %number of spikes
+sigma = 4; %determines SNR
 
 
 params.method = 'numspikes';
@@ -31,23 +31,23 @@ ylabel ('Voltage in µV')
 xlabel ( 'Time in s')
 hold off;
 
-%%
+
 in.M = s;
 in.SaRa = fs;
 
 spikepos1 = WTEO(in,params);
-spikepos2 = GABOR(in,params); 
+spikepos2 = TIFCO(in,params); 
 spikepos3 = SWTTEO(in,params);
 spikepos4 = MTEO(in,[1 3 5],params);
 spikepos5 = SWT2012(in,params);  
 spikepos6 = ABS(in,params);
-spikepos7 = ptsdMat2(in,params);
+spikepos7 = PTSD(in,params);
 
 offset = 2e-4*fs;
 
 res1 = evalPeakList(sppos,offset,spikepos1);
 res2 = evalPeakList(sppos,offset,spikepos2);
-res3 = evalPeakList(sppos,offset,spikepos3');
+res3 = evalPeakList(sppos,offset,spikepos3);
 res4 = evalPeakList(sppos,offset,spikepos4);
 res5 = evalPeakList(sppos,offset,spikepos5);
 res6 = evalPeakList(sppos,offset,spikepos6);

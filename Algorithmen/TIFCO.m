@@ -1,4 +1,4 @@
-function [spikepos,sx1,c] = GABOR(in,params,sx)
+function [spikepos,sx1,c] = TIFCO(in,params,sx)
 %GABOR computes the timestamps of detected spikes in timedomain using a
 %Gabor Transform based spike detection.
 %
